@@ -71,9 +71,18 @@
 
   .use-motion .logo-line-before i { left: initial; }
   .use-motion .logo-line-after i { right: initial; }
+
+  table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+  }
+  th,td {
+    padding: 5px;
+  }
   </style>
 </noscript>
 
+<script src="/js/myjs.js"></script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -169,8 +178,8 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span id="demo" class="post-meta-item-text">Are U sure about this?</span>
-              <button type="button" onclick="document.getElementById('demo').innerHTML = 'ZZZ'">No!</button>
+              <span id="demo" class="post-meta-item-text" onmouseover= "this.innerHTML='Realy?'" onmouseout="this.innerHTML='Are U sure about this?'" >Are U sure about this?</span>
+              <button type="button" onclick="ClickFunc()">What day is today?</button>
             </span>
 
           
@@ -179,20 +188,25 @@
       </header>
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      <div id = "metv" align="left">
+      </div>
   
+      <button type = "button" onclick="loadXMLDoc()">Met's Cover</button>
+      <button type = "button" onclick="document.getElementById('demo1').innerHTML = ''">Clear</button>
+      <table id = "demo1" style = "width : 300px"></table>
+
+    
+
+    <div class="post-body" itemprop="articleBody">
       <p>Not something important, but I just want to show you the cute Met ﾟ ∀ﾟ)ノ</p>
+      <p id="pra"></p>
       <div align="left" style="display:inline">
         <img src="/images/met1.gif" alt="Met1" height="300" width="" style="display:inline"/>
         <img src="/images/met2.gif" alt="Met2" height="300" width="" style="display:inline"/>
       </div>
-      
-
     </div>
 
+    
     
     
     
