@@ -26,6 +26,7 @@ function loadXMLDoc() {
      "</td></tr>";
    }
     document.getElementById("demo1").innerHTML = table;
+    document.getElementById("metButton").setAttribute('onclick','closeMet()');
  }
 
  function clearFunc (metLink){
@@ -33,4 +34,9 @@ function loadXMLDoc() {
   'src="https://www.youtube.com/embed/' + metLink+ '?autoplay=1"' +
   'frameborder="0">'+
   '</iframe>';
+}
+
+function closeMet() {
+  document.getElementById("demo1").innerHTML = "";
+  document.getElementById('metButton').setAttribute('onclick','loadXMLDoc()');
 }
